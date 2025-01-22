@@ -1,0 +1,337 @@
+/* @import url(satoshi.css); */
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%; 
+}
+
+body {
+    line-height: 1.6;
+    font-family: "Bai Jamjuree", sans-serif;
+    color: #333;
+}
+
+img {
+    max-width: 100%; 
+    display: block;
+}
+
+ul,
+ol {
+    list-style: none; 
+}
+
+a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.navbar {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-weight: 900;
+    color: rgb(114, 21, 201);
+    font-size: 20px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-item {
+    color: black;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-icon {
+    color: darkgrey;
+}
+
+.nav-btn {
+    background-color: rgb(114, 21, 201);
+    color: white;
+    padding: 7px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+}
+
+.hero-page {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    /* padding: 20px; */
+}
+
+
+.hero-img {
+    width: 100%;
+    height: 500px; 
+    overflow: hidden;
+}
+
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    
+}
+.hero-text {
+    position: absolute;
+    left: 10%; 
+    color: #fff; 
+    font-family: Satoshis;
+    padding-left: 40px;
+}
+
+
+.hero-up .up-text {
+    font-size: 14px;
+    font-family: "Bai Jamjuree", sans-serif;
+    /* background: rgba(0, 0, 0, 0.4); 
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 50px; */
+}
+
+.hero-heading {
+    font-size: 50px;
+    margin: 10px 0;
+    line-height: 80px;
+    font-style: normal;
+    font-weight: 300;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: 80px;
+}
+
+.hero-p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-family: "Bai Jamjuree", sans-serif;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 7px 20px;
+    background-color: rgb(114, 21, 201);
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: 12px;
+}
+
+.hero-btn:hover {
+    background-color: rgb(114, 21, 201);
+    
+}
+
+.about-page {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    padding: 100px 0;
+}
+
+.about-left {
+    align-items: center;
+}
+.overlap-container {
+    position: relative;
+    display: inline-block;
+}
+
+.about-hidden,
+.schedule-hidden {
+    color: rgb(244, 239, 248);
+    font-weight: 900;
+    font-size: 50px;
+    position: absolute;
+    top: -60px; 
+    left: 0px; 
+    z-index: 0;
+}
+
+.about-title,
+.schedule-title {
+    color: #000;
+    font-size: 20px;
+    position: relative;
+    z-index: 1; 
+    padding-bottom: 5px;
+}
+
+.about-p {
+    font-size: 14px;
+    padding-bottom: 22px;
+}
+
+.about-btn {
+    display: inline-block;
+    padding: 7px 20px;
+    background-color: rgb(114, 21, 201);
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: 12px;
+}
+
+.about-image {
+    border-radius: 10px;
+}
+
+.gallery {
+    display: flex;
+    padding-bottom: 100px;
+}
+
+.gallery-left, .gallery-middle, .gallery-right {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+   
+}
+
+/* Gallery images fill the container */
+.gallery-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Dark overlay effect */
+.gallery-left::before,
+.gallery-middle::before,
+.gallery-right::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    transition: background 0.3s ease;
+    z-index: 1; 
+}
+
+/* Centered text styling */
+.gallery-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2; 
+    pointer-events: none; 
+}
+
+/* Hover effect: darkens overlay */
+.gallery-left:hover::before,
+.gallery-middle:hover::before,
+.gallery-right:hover::before {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.schedule-heading {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.schedule-under-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.schedule-dati {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    margin-bottom: 50px;
+}
+.calendar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 7px 10px;
+    border: 1px solid gray;
+    border-radius: 50px;
+}
+.schedule-date,
+.schedule-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.schedule-p {
+    margin-bottom: 20px;
+}
+
+.schedule-each {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.schedule-img {
+    border-radius: 5px;
+}
+
+.scheduletime {
+    font-size: 14px;
+}
+
+.scheduletitle {
+    font-size: 16px;
+}
+.schedulep {
+    font-size: 14px;
+}
+/* color: rgb(114, 21, 201); */
